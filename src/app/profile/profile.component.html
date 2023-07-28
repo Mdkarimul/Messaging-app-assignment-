@@ -5,17 +5,24 @@
 
       <div class="profile">
         <div class="top-line">
-            <a routerLink=""><span><svg  xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow" width="25" height="25"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg></span></a>
-            <a routerLink="/conversation">
-                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu" width="25" height="25"><path d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"></path></svg></span>
+            <a routerLink="">
+                <span><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" fill="#dddddd" class="color000000 svgShape"></path></svg></span>
             </a>
-    
+            <a routerLink="/conversation">
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="menu"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="64" r="16" fill="#dddddd" class="color000000 svgShape"></circle><circle cx="128" cy="128" r="16" fill="#dddddd" class="color000000 svgShape"></circle><circle cx="128" cy="192" r="16" fill="#dddddd" class="color000000 svgShape"></circle></svg></span>
+            </a>
           </div> 
-        <h3 class="title">My Profile</h3>
+          
+       
         <div class="profile-header">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <h3 *ngIf="profileData">{{profileData.Name}}</h3>
-            <span *ngIf="profileData">{{profileData.Description}}</span>
+            <div class="title-cont">
+                <h3 class="title">My Profile</h3>
+            </div>
+            <div class="profile-details">
+                <img src="../../assets/images/profile.jpg" alt="">
+                <h3 *ngIf="profileData">{{profileData.Name}}</h3>
+                <span *ngIf="profileData">{{profileData.Description}}</span>
+            </div>
         </div>
         <div class="profile-footer">
             <div class="photos">

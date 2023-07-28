@@ -15,7 +15,6 @@ export class FeedComponent {
   }
 
   ngOnInit(): void {
-    alert("init");
    this.getData();
    this.getPost(this.pageNo);
   }
@@ -23,14 +22,12 @@ export class FeedComponent {
   getData():void{
     this.httpService.getProfile().subscribe((data:any)=>{
     this.profileData = data;
-    console.log(this.profileData);
     });
   }
 
   getPost(pageNo:number):void{
     this.httpService.getPost(pageNo).subscribe((data:any)=>{
     this.postData = data;
-    console.log(this.postData);
     }); 
 }
 

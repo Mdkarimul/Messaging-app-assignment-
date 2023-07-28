@@ -1,7 +1,7 @@
 .main{
     width: 100%;
     height:auto;
-    background-color: #ffffff;
+    background-color:var(--bg-main);
     display: flex;
     justify-content: space-between;
 
@@ -10,24 +10,24 @@
 .left-cont{
     width: 30%;
     height:100vh;
-    background-color:rgb(233, 231, 231);
+    background-color:var(--bg-two);
     position: sticky;
     top:0px;
 }
 
 .middle-cont{
     width:40%;
-    background-color:#F7F7F7;
+    background-color:var(--bg-one);
     height:auto;
-    box-shadow: 0.5px 0.5px 0.5px 1px #ddd;
+    box-shadow: 0.5px 0.5px 0.5px 1px var(--box-shadow-one);
     border-radius:5px;
     padding:2vw;
- 
 }
+
 .right-cont{
     width: 30%;
     height:100vh;
-    background-color:rgb(233, 231, 231);
+    background-color:var(--bg-two);
     position: sticky;
     top:0px;
 }
@@ -38,7 +38,7 @@
     align-items: center;
     float: left;
     width: 100%;
-    margin-bottom:3vh;
+    margin-bottom:1vh;
 }
 .top-line span{
     cursor: pointer;
@@ -60,10 +60,7 @@
     background: #2A24A8;
     background: linear-gradient(225deg, #2A24A8, #87218D);
 }
-.profile h3{
-    font-family: var(--font-syle-one);
-    font-size: 1.5vw;
-}
+
 
 /*profile header*/
 .profile .profile-header{
@@ -71,26 +68,44 @@ width: 100%;
 float: left;
 height:auto;
 display: flex;
+justify-content: space-around;
 flex-direction: column;
-align-items: center;
-padding:2vw 3vw;
+margin-bottom:1.8vw;
+}
+.profile .profile-header .title-cont{
+width: 100%;
+height: auto;
+}
+.profile .profile-header .profile-details{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    }
+
+.profile .profile-header .title-cont .title{
+    font-family: var(--font-syle-one);
+    font-size: 1.5vw;
+    color: var(--text-color-two);
+    padding: 0px;
+    margin:5px 0px;
 }
 
-.profile .profile-header img{
+
+.profile .profile-header .profile-details img{
     width:5vw;
     height:5vw;
     border-radius: 50%;
     cursor: pointer;
 }
-.profile .profile-header h3{
+.profile .profile-header .profile-details h3{
     font-family: var(--font-syle-one);
-    color: #191818;
-    margin: 1vw 0px;
-    font-size: 1.8vw;
+    color:var(--text-color-one);
+    margin:0vw 0px;
+    font-size: 1.5vw;
 }
-.profile .profile-header span{
+.profile .profile-header .profile-details span{
     font-family: var(--font-syle-one);
-    color: #a1a1a1;
+    color:var(--text-color-two);
     text-align: center;
    font-size:1.2vw;
 }
@@ -114,15 +129,15 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .photos h3{
     font-family: var(--font-syle-one);
-    color: #191818;
-    margin: 1vw 0px;
+    color: var(--text-color-three);
+    margin:0.5vw 0px;
     font-size: 1.5vw;
 }
 .profile .profile-footer .photos span{
     font-family: var(--font-syle-one);
-    color: #a1a1a1;
+    color:var(--text-color-two);
     text-align: center;
-   font-size: 1.2vw; 
+   font-size: 1vw; 
    text-transform: capitalize;
 }
 
@@ -138,15 +153,15 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .followers h3{
     font-family: var(--font-syle-one);
-    color: #191818;
-    margin: 1vw 0px;
+    color: var(--text-color-three);
+    margin:0.5vw 0px;
     font-size: 1.5vw;
 }
 .profile .profile-footer .followers span{
     font-family: var(--font-syle-one);
-    color: #a1a1a1;
+    color:var(--text-color-two);
     text-align: center;
-   font-size: 1.2vw; 
+   font-size: 1vw; 
    text-transform: capitalize;
 }
 .profile .profile-footer .following{
@@ -160,15 +175,15 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .following h3{
     font-family: var(--font-syle-one);
-    color: #191818;
-    margin: 1vw 0px;
+    color:var(--text-color-three);
+    margin:0.5vw 0px;
     font-size: 1.5vw;
 }
 .profile .profile-footer .following span{
     font-family: var(--font-syle-one);
-    color: #a1a1a1;
+    color:var(--text-color-two);
     text-align: center;
-   font-size: 1.2vw; 
+   font-size: 1vw; 
    text-transform: capitalize;
 }
 
@@ -198,6 +213,48 @@ padding:2vw 3vw;
 }
 
 
+
+/*css responsive coding*/
+
+@media(max-width:450px){
+    .left-cont {
+      width: 0%;
+      display: none;
+    }
+    .middle-cont{
+      width:90%;
+      margin: auto;
+    }
+    .right-cont{
+      width:0%;
+      display: none;
+    }
+
+    .top-line span #left-arrow,#menu{
+        width:4vw;
+        height:4vw;
+    }
+    .profile .profile-header .title-cont .title{
+    font-size:2vw;
+    }
+  }
+  
+  
+  @media(max-width:750px){
+      .left-cont {
+        width: 0%;
+        display: none;
+      }
+      .middle-cont{
+        width:85%;
+        margin: auto;
+      }
+      .right-cont{
+        width:0%;
+        display: none;
+      }
+   
+    }
 
 
 

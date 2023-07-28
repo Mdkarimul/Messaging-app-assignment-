@@ -13,4 +13,11 @@ html{
 
 :root {
     --font-syle-one:'Lato', sans-serif;
+    --text-color-one:#fff;
+    --text-color-two:#ddd;
+    --text-color-three:#191818;
+    --bg-main:#ffffff;
+    --bg-one:#F7F7F7;
+    --bg-two:rgb(233, 231, 231);
+    --box-shadow-one:#ddd;
 }

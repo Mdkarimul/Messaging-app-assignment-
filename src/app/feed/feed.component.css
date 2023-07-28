@@ -1,7 +1,7 @@
 .main{
     width: 100%;
     height:auto;
-    background-color: #ffffff;
+    background-color:var(--bg-main);
     display: flex;
     justify-content: space-between;
 
@@ -10,38 +10,27 @@
 .left-cont{
     width: 30%;
     height:100vh;
-    background-color:rgb(233, 231, 231);
+    background-color:var(--bg-two);
     position: sticky;
     top:0px;
 }
 
 .middle-cont{
     width:40%;
-    background-color:#F7F7F7;
+    background-color:var(--bg-one);
     height:auto;
-    box-shadow: 0.5px 0.5px 0.5px 1px #ddd;
+    box-shadow: 0.5px 0.5px 0.5px 1px var(--box-shadow-one);
     border-radius:5px;
     padding:2vw;
- 
 }
 .right-cont{
     width: 30%;
     height:100vh;
-    background-color:rgb(233, 231, 231);
+    background-color:var(--bg-two);
     position: sticky;
     top:0px;
 }
-/* .middle-cont .top-line{
-    display: flex;
-    justify-content: space-between;
-}
-.middle-cont .top-line span{
-cursor: pointer;
-}
-.middle-cont .top-line span svg{
-    color:initial;
 
-} */
 
 
 /*profile section design*/
@@ -64,30 +53,39 @@ cursor: pointer;
     align-items:center;
     flex-direction: column;
     position: relative;
+    padding:0.5vw 0vw;
 }
 .middle-cont .profile .profile-content div{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content:space-around;
     align-items:flex-start;
 }
+.middle-cont .profile .profile-content div div{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
 .middle-cont .profile .profile-content span{
+
 font-family: var(--font-syle-one);
-font-size:1vw;
-color: #ddd;
+font-size:1.2vw;
+color:var(--text-color-two);
 }
 .middle-cont .profile .profile-content h3{
     font-family: var(--font-syle-one);
-    font-size:1.5vw;
-    color: #191818;
+    font-size:1.8vw;
+    color:var(--text-color-two);
 }
 .middle-cont .profile .profile-image{
     display: flex;
     justify-content:flex-end;
     align-items:flex-start;
 }
-.middle-cont .profile .profile-image svg{
+.middle-cont .profile .profile-image #edit{
     cursor: pointer;
 }
 .middle-cont .profile .profile-content img{
@@ -111,34 +109,34 @@ color: #ddd;
     font-size:1vw;
     margin:0.5vh 0px;
     font-weight: bold;
-    color: #191818;
+    color: var(--text-color-three);
  }
 
  .middle-cont .friends-list .friends{
     width:100%;
     height:auto;
     padding: 1vw;
-    overflow-x:scroll;
+    overflow-x:auto;
     overflow-y: hidden;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
  }
 
  .middle-cont .friends-list .friends::-webkit-scrollbar{
-   background-color:#ddd;
+   background-color:var(--bg-two);
    height:5px;
  }
  .middle-cont .friends-list .friends::-webkit-scrollbar-thumb{
-    background-color: #191818;
+    background-color: var(--text-color-three);
  }
 
  .middle-cont .friends-list .friends .add-friend{
     width:5vw;
     height:5vw;
-    background-color:#ffffff;
+    background-color:var(--bg-main);
     border-radius: 5px;
     margin-right:1.3vw;
-    box-shadow: 1px 1px 2px 3px #ddd;
+    box-shadow: 1px 1px 2px 3px var(--box-shadow-one);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,10 +144,10 @@ color: #ddd;
 
  }
  .middle-cont .friends-list .friends .friend{
-    width:5vw;
-    height:5vw;
+    width:4vw;
+    height:4vw;
     /* outline:1px solid #191818; */
-    box-shadow: 0px 0px 1px 1px #191818;
+    box-shadow: 0px 0px 1px 1px var(--text-color-three);
     border-radius: 50%;
     margin-right:1.3vw;
     cursor: pointer;
@@ -158,8 +156,8 @@ color: #ddd;
     margin-right:0vw;
  }
  .middle-cont .friends-list .friends .friend img{
-    width:5vw;
-    height:5vw;
+    width:4vw;
+    height:4vw;
     border-radius: 50%;
  }
 
@@ -170,7 +168,7 @@ color: #ddd;
     height:auto;
     margin: 1vw auto;
     padding: 1vw;
-    box-shadow:0px 2px 18px 1px #ddd;
+    box-shadow:0px 2px 18px 1px var(--box-shadow-one);
    border-radius: 5px;
 }
 
@@ -201,8 +199,8 @@ color: #ddd;
 } 
 
 .post .description img{
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   margin:0px 1vw;
 }
@@ -220,7 +218,7 @@ color: #ddd;
 
 .post .description div span{
     font-family: var(--font-syle-one);
-    color: #191818;
+    color:var(--text-color-three);
     font-size: 1vw;
     
 }
@@ -228,7 +226,7 @@ color: #ddd;
 .pagination{
     width: 100%;
     height: 40px;
-    background-color: #ffffff;
+    background-color:var(--bg-one);
     float: left;
     display: flex;
     justify-content: space-around;
@@ -241,7 +239,7 @@ color: #ddd;
     border-radius:2px;
     font-family: var(--font-syle-one);
     cursor: pointer;
-    color: #191818;
+    color:var(--text-color-three);
 }
 .pagination :last-child{
     border: none;
@@ -249,19 +247,19 @@ color: #ddd;
     border-radius:2px;
     font-family: var(--font-syle-one);
     cursor: pointer;
-    color: #191818;
+    color: var(--text-color-three);
 }
 .pagination span{
     width:2vw;
     height:2vw;
     border-radius: 50%;
-    background-color: #e4e4e4;
+    background-color:var(--bg-two);
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 4px;
-    color: #191818;
+    color: var(--text-color-three);
     cursor: pointer;
 }
 
@@ -303,6 +301,9 @@ color: #ddd;
     .middle-cont{
       width:85%;
       margin: auto;
+    }
+    .middle-cont .profile{
+        padding: 3vw;
     }
     .right-cont{
       width:0%;
