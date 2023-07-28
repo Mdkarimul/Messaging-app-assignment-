@@ -31,7 +31,6 @@
     position: sticky;
     top:0px;
 }
-
 /*top icon section*/
 .top-line{
     display: flex;
@@ -44,6 +43,11 @@
 .top-line span{
     cursor: pointer;
 }
+.top-line span #left-arrow,#menu{
+    width:2vw;
+    height:2vw;
+}
+
 
 /*profile section*/
 .profile {
@@ -52,6 +56,9 @@
     float: left;
     padding: 1vw;
     border-radius: 5px;
+    /* border:1px solid red; */
+    background: #2A24A8;
+    background: linear-gradient(225deg, #2A24A8, #87218D);
 }
 .profile h3{
     font-family: var(--font-syle-one);
@@ -83,7 +90,7 @@ padding:2vw 3vw;
 }
 .profile .profile-header span{
     font-family: var(--font-syle-one);
-    color: #b5b4b4;
+    color: #a1a1a1;
     text-align: center;
    font-size:1.2vw;
 }
@@ -113,7 +120,7 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .photos span{
     font-family: var(--font-syle-one);
-    color:#b5b4b4;
+    color: #a1a1a1;
     text-align: center;
    font-size: 1.2vw; 
    text-transform: capitalize;
@@ -137,7 +144,7 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .followers span{
     font-family: var(--font-syle-one);
-    color:#b5b4b4;
+    color: #a1a1a1;
     text-align: center;
    font-size: 1.2vw; 
    text-transform: capitalize;
@@ -159,7 +166,7 @@ padding:2vw 3vw;
 }
 .profile .profile-footer .following span{
     font-family: var(--font-syle-one);
-    color:#b5b4b4;
+    color: #a1a1a1;
     text-align: center;
    font-size: 1.2vw; 
    text-transform: capitalize;

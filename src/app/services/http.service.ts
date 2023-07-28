@@ -38,4 +38,15 @@ export class HttpService {
   const url = "https://app.smartkeeda.com/demoapi/demo/Getprofile";
   return this.http.post(url,"",{params:Param});
  }
+
+ getConversation(){
+  const url = "https://app.smartkeeda.com/demoapi/demo/GetConversation";
+  const queryParam = new HttpParams();
+  const Param = queryParam.append("UserId",1)
+                          .append("Token","123")
+                          .append("AppVersion",100)
+                          .append("GroupId",1);
+                    return this.http.post(url,"",{params:Param});
+ }
+
 }

@@ -1,0 +1,136 @@
+.main{
+    width: 100%;
+    height:auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-cont{
+    width: 30%;
+    height:100vh;
+    background-color:rgb(233, 231, 231);
+    position: sticky;
+    top:0px;
+}
+
+.middle-cont{
+    width:40%;
+    background-color:#F7F7F7;
+    height:auto;
+    box-shadow: 0.5px 0.5px 0.5px 1px #ddd;
+    border-radius:5px;
+    padding:2vw;
+ 
+}
+.right-cont{
+    width: 30%;
+    height:100vh;
+    background-color:rgb(233, 231, 231);
+    position: sticky;
+    top:0px;
+}
+
+/*top icon section*/
+.top-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    width: 100%;
+    margin-bottom:3vh;
+}
+.top-line span{
+    cursor: pointer;
+}
+.top-line span #left-arrow,#menu{
+    width:2vw;
+    height:2vw;
+}
+
+/*conversation*/
+.conversation{
+    width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 5px;
+    float:left;
+    box-shadow: 0px 2px 18px 1px #e8e7e7;
+}
+.conversation-header{
+    padding: 1vw;
+    background: #2A24A8;
+    background: linear-gradient(225deg, #2A24A8, #87218D);
+    border-radius: 5px;
+}
+.title{
+    font-family: var(--font-syle-one);
+    font-size: 1.3vw;
+    color: #191818;
+    font-weight:600;
+}
+.search-cont {
+    width: 100%;
+    height:auto;
+    padding:1vw 0vw;
+    margin:2vw 0vw;
+    position: relative;
+}
+.search-cont input{
+    width:100%;
+    padding:0.6vw 1.3vw;
+    border:1px solid #ddd;
+    border-radius:20px;
+    font-family: var(--font-syle-one);
+    font-size:1.3vw;
+    color: #191818;
+    box-shadow:inset 0px 2px 18px 1px #eeeeee;
+ 
+}
+.search-cont i{
+position: absolute;
+ top:25px;
+ right:25px;
+cursor: pointer;
+}
+.search-cont input:focus{
+    outline: none;
+}
+.chat-list{
+    width:100%;
+    float: left;
+    height:auto;
+    border-radius: 5px;
+    padding: 1vw;
+    
+}
+.chat-list .list-item{
+    width: 100%;
+    height:auto;
+    float: left;
+    display: flex;
+    padding:0.5vw 0vw;
+
+}
+.chat-list .list-item h3{
+    font-family: var(--font-syle-one);
+    font-size: 1.3vw;
+    color: #191818;
+    font-weight:600;
+}
+.chat-list .list-item span{
+    font-family: var(--font-syle-one);
+    font-size:1.1vw;
+}
+.chat-list .list-item img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1vw;
+}
+.chat-list .list-item div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

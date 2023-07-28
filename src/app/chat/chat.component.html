@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="left-cont"></div>
+    <div class="middle-cont">
+        <div class="conversation">
+           <div class="conversation-header">
+            <div class="top-line">
+                <a routerLink="/profile"><span><svg  xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg></span></a>
+                <a routerLink="/conversation">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu" width="25" height="25"><path d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"></path></svg></span>
+                </a>
+              </div> 
+
+              <h3 class="title">Conversation</h3>
+
+              <div class="search-cont">
+                <input type="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </div>
+           </div>
+
+              <div class="chat-list">
+
+        <ng-container *ngIf="chatList">
+            <div class="list-item" *ngFor="let chat of chatList.FriendList">
+                <img [src]="chat.ProfileImage" alt="">
+               <div>
+                <h3>{{ chat.Name }}</h3>
+                <span>{{ chat.LastMessage }}</span>
+               </div>
+              </div>
+        </ng-container>
+
+
+                 
+
+                 
+              </div>
+
+           
+
+              
+        </div>
+    </div>
+    <div class="right-cont"></div>
+</div>
