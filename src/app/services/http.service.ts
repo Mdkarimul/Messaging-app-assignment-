@@ -19,7 +19,6 @@ export class HttpService {
  }
 
  getPost(pageNo:Number){
-  console.log(pageNo);
   const queryParam = new HttpParams();
   const Param = queryParam.append("PageNo",pageNo.toString())
                           .append("Token","123")
@@ -30,5 +29,13 @@ export class HttpService {
   return  this.http.post<any>(url,"",{params:Param});
  }
 
-
+ getProfileWithImage(){
+  const queryParam = new HttpParams();
+  const Param = queryParam.append("UserId",1)
+                          .append("Token","123")
+                          .append("AppVersion",100)
+                          .append("GroupId",1);
+  const url = "https://app.smartkeeda.com/demoapi/demo/Getprofile";
+  return this.http.post(url,"",{params:Param});
+ }
 }

@@ -1,0 +1,60 @@
+<div class="main">
+    <div class="left-cont"></div>
+    <div class="middle-cont">
+        
+
+      <div class="profile">
+        <div class="top-line">
+            <a routerLink=""><span><svg  xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="left-arrow" width="25" height="25"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg></span></a>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu" width="25" height="25"><path d="M12,7a2,2,0,1,0-2-2A2,2,0,0,0,12,7Zm0,10a2,2,0,1,0,2,2A2,2,0,0,0,12,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,12,10Z"></path></svg></span>
+          </div> 
+        <h3 class="title">My Profile</h3>
+        <div class="profile-header">
+            <img src="../../assets/images/profile.jpg" alt="">
+            <h3 *ngIf="profileData">{{profileData.Name}}</h3>
+            <span *ngIf="profileData">{{profileData.Description}}</span>
+        </div>
+        <div class="profile-footer">
+            <div class="photos">
+                <span>photos</span>
+                <h3 *ngIf="profileData">{{profileData.PhotosCount}}</h3>
+            </div>
+            <div class="followers">
+                <span>followers</span>
+                <h3 *ngIf="profileData">{{profileData.FollowersCount}}</h3>
+            </div>
+            <div class="following">
+                <span>following</span>
+                <h3 *ngIf="profileData">{{profileData.FollowsCount}}</h3>
+            </div>
+        </div>
+      </div>
+
+
+      <ng-container *ngIf="profileData">
+        <div class="profile-photos">
+          
+            <div class="photo-cont" *ngFor="let photo of profileData.PhotoList">
+                <img  [src]="photo.Image" alt="">
+            </div>
+     
+            <!-- <div class="first-cont">
+                <img  src="../../assets/images/profile.jpg" alt="">
+            </div>
+            
+            <div class="second-cont">
+             <div>
+                <img  src="../../assets/images/profile.jpg" alt="">
+             </div>
+             <div>
+                <img  src="../../assets/images/profile.jpg" alt="">
+             </div>
+            </div> -->     
+                  </div>
+      </ng-container>
+ 
+
+
+    </div>
+    <div class="right-cont"></div>
+</div>

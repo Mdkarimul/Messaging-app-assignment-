@@ -1,0 +1,201 @@
+.main{
+    width: 100%;
+    height:auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.left-cont{
+    width: 30%;
+    height:100vh;
+    background-color:rgb(233, 231, 231);
+    position: sticky;
+    top:0px;
+}
+
+.middle-cont{
+    width:40%;
+    background-color:#F7F7F7;
+    height:auto;
+    box-shadow: 0.5px 0.5px 0.5px 1px #ddd;
+    border-radius:5px;
+    padding:2vw;
+ 
+}
+.right-cont{
+    width: 30%;
+    height:100vh;
+    background-color:rgb(233, 231, 231);
+    position: sticky;
+    top:0px;
+}
+
+/*top icon section*/
+.top-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    width: 100%;
+    margin-bottom:3vh;
+}
+.top-line span{
+    cursor: pointer;
+}
+
+/*profile section*/
+.profile {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 1vw;
+    border-radius: 5px;
+}
+.profile h3{
+    font-family: var(--font-syle-one);
+    font-size: 1.5vw;
+}
+
+/*profile header*/
+.profile .profile-header{
+width: 100%;
+float: left;
+height:auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding:2vw 3vw;
+}
+
+.profile .profile-header img{
+    width:5vw;
+    height:5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile .profile-header h3{
+    font-family: var(--font-syle-one);
+    color: #191818;
+    margin: 1vw 0px;
+    font-size: 1.8vw;
+}
+.profile .profile-header span{
+    font-family: var(--font-syle-one);
+    color: #b5b4b4;
+    text-align: center;
+   font-size:1.2vw;
+}
+
+/*profile footer*/
+.profile .profile-footer{
+    width: 100%;
+    float: left;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.profile .profile-footer .photos{
+    width:30%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0vw;
+}
+.profile .profile-footer .photos h3{
+    font-family: var(--font-syle-one);
+    color: #191818;
+    margin: 1vw 0px;
+    font-size: 1.5vw;
+}
+.profile .profile-footer .photos span{
+    font-family: var(--font-syle-one);
+    color:#b5b4b4;
+    text-align: center;
+   font-size: 1.2vw; 
+   text-transform: capitalize;
+}
+
+
+.profile .profile-footer .followers{
+    width:30%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0vw;
+}
+.profile .profile-footer .followers h3{
+    font-family: var(--font-syle-one);
+    color: #191818;
+    margin: 1vw 0px;
+    font-size: 1.5vw;
+}
+.profile .profile-footer .followers span{
+    font-family: var(--font-syle-one);
+    color:#b5b4b4;
+    text-align: center;
+   font-size: 1.2vw; 
+   text-transform: capitalize;
+}
+.profile .profile-footer .following{
+    width:30%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0vw;
+}
+.profile .profile-footer .following h3{
+    font-family: var(--font-syle-one);
+    color: #191818;
+    margin: 1vw 0px;
+    font-size: 1.5vw;
+}
+.profile .profile-footer .following span{
+    font-family: var(--font-syle-one);
+    color:#b5b4b4;
+    text-align: center;
+   font-size: 1.2vw; 
+   text-transform: capitalize;
+}
+
+/*profile photos section*/
+.profile-photos{
+    float: left;
+    width: 100%;
+    height:auto;
+    margin:2vw 0vw;
+    box-shadow: 0px 2px 18px 1px #dad9d9;
+    padding: 2vw;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.profile-photos .photo-cont{
+    width:48%;
+    height: auto;
+    margin:0.3vw;
+}
+.profile-photos .photo-cont img{
+    width:100%;
+    height: auto;
+    float: left;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+

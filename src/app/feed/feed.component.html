@@ -1,0 +1,82 @@
+<div class="main">
+    <div class="left-cont"></div>
+    <div class="middle-cont">
+    
+      <!--profile section-->
+      <div class="profile">
+        <div class="profile-content">
+          <a routerLink="profile"><img src="../assets/images/profile.jpg" alt=""></a>
+          <div>
+            <span>Hellow !</span>
+            <h3 *ngIf="profileData">{{profileData.Name}}</h3>
+            <span >Aspiring software developer</span>
+          </div>
+       
+        </div>
+        <div class="profile-image">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" baseProfile="tiny" version="1.2" viewBox="0 0 24 24" id="edit"><path d="M21.561 5.318l-2.879-2.879A1.495 1.495 0 0 0 17.621 2c-.385 0-.768.146-1.061.439L13 6H4a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-9l3.561-3.561c.293-.293.439-.677.439-1.061s-.146-.767-.439-1.06zM11.5 14.672L9.328 12.5l6.293-6.293 2.172 2.172-6.293 6.293zm-2.561-1.339l1.756 1.728L9 15l-.061-1.667zM16 19H5V8h6l-3.18 3.18c-.293.293-.478.812-.629 1.289-.16.5-.191 1.056-.191 1.47V17h3.061c.414 0 1.108-.1 1.571-.29.464-.19.896-.347 1.188-.64L16 13v6zm2.5-11.328L16.328 5.5l1.293-1.293 2.171 2.172L18.5 7.672z"></path></svg>
+        </div>
+      </div>
+  
+      <!--friends list-->
+      <div class="friends-list">
+        <span>Friends list</span>
+        <div class="friends">
+          <div class="add-friend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="positive"><path fill="#333" fill-rule="evenodd" d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42ZM24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" clip-rule="evenodd"></path><path fill="#333" fill-rule="evenodd" d="M13 24C13 23.4477 13.4477 23 14 23L34 23C34.5523 23 35 23.4477 35 24C35 24.5523 34.5523 25 34 25L14 25C13.4477 25 13 24.5523 13 24Z" clip-rule="evenodd"></path><path fill="#333" fill-rule="evenodd" d="M24 13C24.5523 13 25 13.4477 25 14L25 34C25 34.5523 24.5523 35 24 35C23.4477 35 23 34.5523 23 34L23 14C23 13.4477 23.4477 13 24 13Z" clip-rule="evenodd"></path></svg>
+          </div>
+  
+          <ng-container *ngIf="profileData">
+            <div  class="friend" *ngFor="let friend of profileData.FriendList">
+              <img [src]="friend.ProfileImage" alt="{{friend.Name}}">
+             
+            </div>
+          </ng-container>
+       
+       
+         
+         
+      
+        </div>
+      </div>
+  
+  
+      <!--post section-->
+      <ng-container *ngIf="postData">
+      <div class="post"  *ngFor="let post of postData.PostList">
+        <div class="image">
+          <img [src]="post.PostImage" alt="{{post.Name}}">
+        </div>
+        <div class="description">
+          <img [src]="post.ProfileImage" alt="">
+         <div>
+          <h5>{{post.Name}}</h5>
+          <span>{{post.Time}}</span>
+         </div>
+        </div>
+      </div>
+  
+      <div class="pagination">
+        <button [disabled]="pageNo <= 1" class="previous" (click)="prev()">Previous</button>
+        <span (click)="actualPage(1)">1</span>
+        <span (click)="actualPage(2)">2</span>
+        <span (click)="actualPage(3)">3</span>
+        <span (click)="actualPage(4)">4</span>
+        <button class="next" (click)="next()">Next</button>
+      </div>
+      </ng-container>
+  
+  
+    
+  
+    
+  
+  
+  
+  
+     
+    </div>
+    <div class="right-cont">
+      
+    </div>
+  </div>
