@@ -13,7 +13,7 @@
               <h3 class="title">Conversation</h3>
 
               <div class="search-cont">
-                <input type="search" placeholder="">
+                <input type="search" placeholder="" #input  (input)="setInput(input.value)" >
                 <i class="fa fa-search" aria-hidden="true"></i>
               </div>
            </div>
@@ -21,7 +21,7 @@
               <div class="chat-list">
 
         <ng-container *ngIf="chatList">
-            <div class="list-item" *ngFor="let chat of chatList.FriendList">
+            <div class="list-item" *ngFor="let chat of chatList.FriendList | filter:inputValue" >
                 <img [src]="chat.ProfileImage" alt="">
                <div>
                 <h3>{{ chat.Name }}</h3>

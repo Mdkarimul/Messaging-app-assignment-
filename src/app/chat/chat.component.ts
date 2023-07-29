@@ -7,14 +7,18 @@ import { HttpService } from '../services/http.service';
 })
 export class ChatComponent implements OnInit {
 public chatList:any; 
+public inputValue:string = '';
   constructor(private httpService:HttpService){
 
   }
   ngOnInit(): void {
     this.httpService.getConversation().subscribe((data)=>{
-      console.log(data);
       this.chatList = data;
     })
+  }
+
+  setInput(inputText:string){
+    this.inputValue = inputText;
   }
 
   

@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FeedComponent } from './feed/feed.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     FeedComponent,
     ProfileComponent,
-    ChatComponent
+    ChatComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

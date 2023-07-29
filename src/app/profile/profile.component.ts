@@ -12,7 +12,6 @@ export class ProfileComponent implements OnInit {
      }
      ngOnInit(): void {  
       this.http.getProfileWithImage().subscribe((data:any)=>{
-        console.log(data);
      this.profileData = data;
       })
      }

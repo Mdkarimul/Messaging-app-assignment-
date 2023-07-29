@@ -39,7 +39,6 @@ this.getPost(this.pageNo);
 prev():void{
 if(this.pageNo >1){
   this.pageNo--;
-  alert(this.pageNo);
   this.getPost(this.pageNo);
 }
 }
